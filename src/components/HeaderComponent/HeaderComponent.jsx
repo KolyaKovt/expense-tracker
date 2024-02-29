@@ -15,7 +15,7 @@ export const HeaderComponent = () => {
     [styles.stylesIsLogin]: isLoggedIn,
   })
   return (
-    <section className={classNamess}>
+    <header className={classNamess}>
       <div>
         <Link className={styles.wrapperLogo} to='/transactions/expenses'>
           <LogoIcon className={styles.logo} />
@@ -25,6 +25,6 @@ export const HeaderComponent = () => {
       {isLoggedIn && <TransactionHistoryNav />}
       {isLoggedIn && <UserBarBtn />}
       {isLoggedIn && <BurgerComponent />}
-    </section>
+    </header>
   )
 }

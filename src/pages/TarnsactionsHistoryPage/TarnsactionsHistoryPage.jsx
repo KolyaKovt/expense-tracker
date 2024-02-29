@@ -10,13 +10,14 @@ import {
 import styles from "./TarnsactionsHistoryPage.module.css"
 import { TransactionsTotal } from "@/components/TransactionsTotal/TransactionsTotal"
 import clsx from "clsx"
+import { MainContainer } from "@/components/MainContainer/MainContainer"
 
 const TarnsactionsHistoryPage = () => {
   const { transactionsType } = useParams()
   const { expenses, incomes } = useSelector(selectTransactionsTotal)
 
   return (
-    <>
+    <MainContainer>
       <div className={styles.pageHeader}>
         <div className={styles.pageHeaderContent}>
           <h1 className={styles.pageTitle}>
@@ -52,7 +53,7 @@ const TarnsactionsHistoryPage = () => {
         <TransactionsSearchTools />
         <TransactionsList />
       </WidgetContainer>
-    </>
+    </MainContainer>
   )
 }
 
